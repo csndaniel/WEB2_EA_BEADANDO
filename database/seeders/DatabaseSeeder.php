@@ -8,6 +8,12 @@ class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
+        
+         $this->call([
+        GuestUserSeeder::class,
+        
+    ]);
+
         // Admin user
         $this->call([
             AdminSeeder::class,
@@ -15,9 +21,11 @@ class DatabaseSeeder extends Seeder
 
         // F1 adatok
         $this->call([
+            
             PilotaSeeder::class,
             GpSeeder::class,
             EredmenySeeder::class,
         ]);
     }
+    
 }
